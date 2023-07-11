@@ -2,13 +2,16 @@ import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
-const Index = () => {
+const index = (props) => {
   return (
     <div>
       <Header/>
+      {
+        props.children
+      }
       <Footer/>
     </div>
   )
 }
 
-export default Index
+export default index

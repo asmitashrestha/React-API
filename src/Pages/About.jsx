@@ -1,6 +1,3 @@
-import React from 'react'
-import Layout from '../components/Index'
-
 const About = () => {
   return (
     <div>

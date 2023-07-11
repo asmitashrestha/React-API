@@ -1,22 +1,34 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import About from './Pages/About'
-import Home from './Pages/Home'
-import Index from './components/Index'
+import Home from "./pages/Home"
+import About from "./Pages/About"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Header from "./components/Layout/Header"
+import Footer from "./components/Layout/Footer"
+import Layout from "./components/Layout"
+import UserApi from "./Pages/UserApi"
+import ProductApi from "./Pages/ProductApi"
+import Useeffectapi from "./Pages/Useeffectapi"
+
+function App() {
+    return <>
+
+        <div>
+            <Layout>
+                <Routes>
+                    <Route path="" element={<Home />} />
+                    <Route path="/users" element={<About />} />
+                    <Route path="/user-api" element={<UserApi/>}/>
+                    <Route path="/product-api" element={<ProductApi/>}/>
+                    <Route path="/useeffect-api" element={<Useeffectapi/>}/>
+                </Routes>
+
+            </Layout>
+
+        </div>
 
 
-const App = () => {
-  return (
-    <div>
-      <Index/>
-      <Router>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/about' element={<About/>}/>
-        </Routes>
-      </Router>
-    </div>
-  )
+        <hr />
+
+
+    </>
 }
-
 export default App
